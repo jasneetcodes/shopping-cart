@@ -1,8 +1,10 @@
-
+import Product from "./Product"
 
 
 
 export default function Shop(){
 
-    return(<><h1>Shop here</h1></>)
+    return(<div>
+        {[...Array(10)].map((e,i) => <Product key={i} />)}
+    </div>)
 }
