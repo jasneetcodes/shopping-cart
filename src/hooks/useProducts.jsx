@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useProducts = () => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState();
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -11,11 +11,12 @@ const useProducts = () => {
                 if(response.status >= 400){
                     throw new Error("Server Error");
                 }
+                
                 return response.json();
             })
             .then((response) => setProducts(response))
             .catch((error) => setError(error))
-            .finally(() => setLoading(true));
+            .finally(() => setLoading(false));
     }, []);
 
     return {products, error, loading};

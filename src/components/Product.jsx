@@ -1,10 +1,12 @@
 
-export default function Product(){
+export default function Product(props){
 
 
     return(<div>
-
-        <h1>Product</h1>
-        <p>Product Description</p>
+        <img src={props.image}></img>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
+        <p>{props.price}</p>
+        <button>Add to cart</button>
     </div>)
 }
