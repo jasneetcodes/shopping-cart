@@ -15,10 +15,9 @@ export default function Cart(){
 
         setPrice(total.toFixed(2));
     },[cart])
-    console.log(cart)
     return(<div>
             <ul>
-        {cart.map(product => <li >{product.title}         {product.price}$</li>)}
+        {cart.map((product,i) => <li key={i} >{product.title}         {product.price}$</li>)}
     </ul>
     <p>Total: {price}$</p>
         </div>)

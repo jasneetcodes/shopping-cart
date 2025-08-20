@@ -5,7 +5,7 @@ export default function Nav(props){
 
 
 
-    return(<ul>
+    return(<ul className="nav">
         <li><Link to="/">Home</Link></li>
         <li><Link to="shop">Shop</Link></li>
         <li><Link to="cart">Cart: </Link>{props.cart.length}</li>

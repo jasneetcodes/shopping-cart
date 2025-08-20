@@ -11,8 +11,7 @@ export default function Product(props){
     return(<div key={props.id}>
         <img src={props.image}></img>
         <h1>{props.title}</h1>
-        <p>{props.description}</p>
-        <p>{props.price}</p>
+        <h2>{props.price} $</h2>
         <button onClick={submitHandler}>Add to cart</button>
     </div>)
 }
