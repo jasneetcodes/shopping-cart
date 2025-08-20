@@ -6,9 +6,9 @@ export default function Product(props){
     const [cart, setCart] = useOutletContext();
 
     function submitHandler (){
-        setCart([...cart, {props}]);
+        setCart([...cart, props]);
     }
-    return(<div>
+    return(<div key={props.id}>
         <img src={props.image}></img>
         <h1>{props.title}</h1>
         <p>{props.description}</p>
